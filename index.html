@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&amp;display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title> AluraGreek</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/estilos-formulario.css"/>
+    <link rel="stylesheet" href="./css/estilos-productos.css"/>
+    <link rel="stylesheet" href="./css/pie-de-pagina.css"/>
+    <link rel="stylesheet" href="./css/tarjeta-info.css"/>
+    <link rel="stylesheet" href="./css/estilos-errores-form.css"/>
+    <link rel="stylesheet" href="./css/media-movil.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+
+<body>
+    <header>
+        <table class="EncabezadoTabla">
+            <td>
+                <img class="imagenMaquinaArcade1" src="./img/arcademachine.png">
+            </td>
+            <td>
+                <img src="https://fontmeme.com/permalink/240507/3b0028f3b3752fd98a4084e9f07b96f6.png" alt="fuentes-pixeladas" border="0">
+            </td>
+            <td>
+                <img class="imagenMaquinaArcade2" src="./img/arcademachine.png">
+            </td>
+        </table>
+    </header>
+
+    <main>
+        <!--PRODUCTOS-->
+        <div class="Productos">
+            <h2>MIS PRODUCTOS</h2>
+            <ul class="listaProductos" alt="lista-productos" data-lista></ul>
+        </div>
+
+        <!--FORMULARIO-->
+        <form class="formulario" data-formulario>
+            <h2>AGREGAR PRODUCTO:</h2>
+            <input required type="text" placeholder="nombre..." id="nombre" name="nombre" maxlength="47" data-nombre="">
+            <span class="mensaje-error"></span>
+            <input required type="number" placeholder="precio..." id="precio" name="precio" data-precio="">
+            <span class="mensaje-error"></span>
+            <input required type="text" placeholder="imagen...(url)" id="imagen" name="imagen" data-imagen="">
+            <span class="mensaje-error"></span>
+            <div class="botones">
+                <input type="submit" value="Enviar" id="enviar">
+                <input type="reset" value="Limpiar" id="limpiar">
+            </div>
+            <span class="mensaje-enviado"></span> 
+            
+        </form>
+       
+
+        <div class="pieDePagina">
+            <footer class="pie">
+                <h1>🕹️👾AluraGeek👾🕹️</h1>
+                <h2>Desarrollado por Carlos Yañez Mtz</h2>
+                <br>
+                <h3>Alura Latam - 2024</h3>
+            </footer>
+        </div>
+
+    </main>
+    
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/crearProducto.js" type="module"></script>
+    <script src="./js/mostrarProducto.js" type="module"></script>
+    <script src="./js/eliminarProd.js" type="module"></script>
+    <script src="./js/limpiarCamposForm.js"></script>
+    
+</body>
+
+</html>

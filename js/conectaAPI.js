@@ -1,7 +1,7 @@
 
 // MUESTRA LA LISTA DE TARGETAS AGREGADAS DESDE EL FORMULARIO EN PANTALLA
 async function listaCards(){
-    const conexion = await fetch("ecommerce-alurageek.vercel.app/cards",{
+    const conexion = await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
         method:"GET",
         headers:{
         "Content-type":"application/json"
@@ -16,7 +16,7 @@ async function listaCards(){
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
 async function crearCard(nombre,precio,imagen){
-        const conexion= await fetch("ecommerce-alurageek.vercel.app/cards",{
+        const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
         method:"POST",
         headers:{
             "Content-type":"application/json"
@@ -47,7 +47,7 @@ async function crearCard(nombre,precio,imagen){
 // ELIMINA EL PRODUCTO AL HACER CLIC EN EL ICONO TRASH
 async function eliminarCard(id) {
     try {
-      const respuesta = await fetch(`ecommerce-alurageek.vercel.app/cards/${id}`, {
+      const respuesta = await fetch(`https://api-dbjson-alurageek.vercel.app/cards/${id}`, {
         method: 'DELETE',
         headers:{
             "Content-type":"application/json"

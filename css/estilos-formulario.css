@@ -1,0 +1,97 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    height: 517px;
+    width: 472px;
+    position: relative;
+    top: -60rem;
+    margin-bottom: 1rem;
+    right: -90rem;
+}
+
+
+.formulario h2 {
+    position: relative;
+    top: 4rem;
+    right: -91rem;
+    font-family: "Press Start 2P";
+    font-size: 21px;
+    color: #f6f2d1;
+    margin-bottom: 7rem;  
+    right: -13px;  
+    -webkit-text-stroke-width: 1px; /* Grosor del borde */
+    -webkit-text-stroke-color: rgb(0, 0, 0); /* Color del borde */
+}
+
+.formulario input {
+   margin-bottom: 40px;
+
+}
+
+.formulario input[type="text"],[type="number"] {
+    border-radius: 30px;
+    height: 58px;
+    width: 350px;
+    position: relative;
+    left: 1.3rem;
+    background-color: #f6f2d1;
+}
+
+.formulario input::placeholder {
+    font-size: 16px; /* Cambia el tamaño de la fuente */
+    color: #03318C; /* Cambia el color del texto */
+    font-family: "IBM Plex Mono";
+    font-weight: 600;
+    line-height: 20.8px;
+    
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    top: 1rem;
+}
+
+.botones input[type="submit"] {
+    height: 55px;
+    width: 188px;
+    border-radius: 15px;
+    background-color: #03318C;
+    font-family: "IBM Plex Mono";
+    font-size: 20px;
+    color: #f6f2d1;
+    font-weight: 500; 
+    align-items: center;
+} 
+
+.botones input[type="reset"] {
+    height: 55px;
+    width: 188px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    font-family: "IBM Plex Mono";
+    font-size: 20px;
+    color: #03318C;
+    font-weight: 500;
+    border: 3px solid #03318C;
+    align-items: center;
+}
+
+#enviar:hover,
+#limpiar:hover {
+    background: #40a7e2;
+    text-transform:uppercase;
+}
+
+.mensaje-enviado {
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-text-stroke-width: 1px; /* Grosor del borde */
+    -webkit-text-stroke-color: rgb(0, 0, 0); /* Color del borde */
+    width: 150px;
+    margin-right: 10rem;
+}

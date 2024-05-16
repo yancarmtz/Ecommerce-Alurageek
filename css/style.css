@@ -1,0 +1,31 @@
+main {
+    background-image: url(../img/fondo-imagen.jpeg);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header {
+    background-color: #5D04D9; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.EncabezadoTabla {
+    display: grid;
+    position: relative;
+    justify-content: center;  
+
+}
+
+.imagenMaquinaArcade1 {
+    height: 23px;
+    width: 18px;  
+    padding-right: 1rem;
+}
+
+.imagenMaquinaArcade2 {
+    height: 23px;
+    width: 18px; 
+    padding-left: 1rem;  
+}

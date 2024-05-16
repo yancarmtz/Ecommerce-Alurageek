@@ -1,0 +1,32 @@
+.pie {
+    margin-top: -28rem;
+    background-color:#5D04D9; 
+    height: 232px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie h2 {
+    font-family: "IBM Plex Mono";
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.pie h1 {
+    font-family: Sixtyfour;
+    font-size: 23px;
+    color: #dac931;
+    font-weight: bold;
+}
+
+.pie h3 {
+    font-family: "IBM Plex Mono";
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: lighter;
+}

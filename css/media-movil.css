@@ -1,0 +1,75 @@
+/*Mobile*/
+@media screen and  (max-width: 767px) {
+
+    main{
+        background-size: cover;
+    }
+
+    .formulario h2 {
+        text-align: center;
+        width: 22rem;
+    }
+    
+    .formulario {
+       left: 0;
+       top: -77rem
+    }
+
+    .formulario input[type="text"], [type="number"] {
+        width: 331px;
+    }
+
+    .Productos {
+       position: relative;
+       left: -87px; 
+       width: 23rem; 
+       height: 72rem;   
+       top: 31rem;
+    }
+
+    .producto-imagen {
+        width: 160px;
+        position: relative;
+        right: -7px;
+    }
+
+    .Productos h2 {
+        left: 32px;
+        width: 104%;
+    }
+
+    .mensaje__titulo {
+        position: relative;
+        padding-left: 20px;
+        margin-right: 150px;
+    }
+
+    .botones {
+        left: 1rem;
+    }
+
+    .botones input[type="submit"] {
+        height: 55px;
+        width: 160px;
+    } 
+    
+    .botones input[type="reset"] {
+        height: 55px;
+        width: 160px;
+    }
+
+    .listaProductos {
+        gap: 4px; /*PARA DAR ESPACIO A CADA PRODUCTO EN EL CENTRO */
+        left: 42px;
+        width: 96%;
+        height: 595px;
+        flex-direction: column;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+
+    .tarjeta {
+        padding: 10px 2px;
+    }
+}

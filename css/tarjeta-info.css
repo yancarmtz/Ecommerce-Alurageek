@@ -1,0 +1,56 @@
+.tarjeta {
+    background-color: #5D04D9; 
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 3px solid #100b31;
+    width: 175px;
+    height: 258px;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    gap: 10px;
+    position: relative;
+    flex-direction: column; /* Alinear los elementos verticalmente */
+}
+
+.tarjeta h3, h4 {
+    font-family: "IBM Plex Mono";
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.producto-datos h3 {
+    margin-top: 5px;  
+    display: flex;
+    text-align: center;
+    width: 100%;
+    word-break: break-all;
+}
+
+
+.datos-producto {
+    display: flex;
+    flex-direction:row;
+}
+
+.datos-producto h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    position: absolute;
+    left: 11px;
+}
+
+.datos-producto input {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 11px;
+    margin-top: 9px;
+}
+
+
+.eliminar:hover {
+    width: 27px;
+    height: 27px;
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+

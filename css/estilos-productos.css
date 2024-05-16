@@ -1,0 +1,58 @@
+.Productos {
+    padding: 40px;
+    display: flex;
+    width: 68%;
+    height: 907px;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.producto-imagen {
+    width: 176px;
+    height: 174px;
+}
+
+.producto-datos {
+    position: static;
+}
+
+.Productos h2 {
+    position: relative;
+    top: 2rem;
+    left: 6rem;
+    font-family: "Press Start 2P";
+    font-size: 24px;
+    text-align: center;
+    color: #f6f2d1;
+    
+}
+
+.Productos div p {
+    position: relative;
+    top: 2rem;
+    left: 1rem;
+    font-family: "Press Start 2P";
+    font-size: 24px;
+    text-align: center;
+    color: #f6f2d1;
+    
+}
+
+.listaProductos {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 1rem;
+    gap: 33px;
+    bottom: 1rem;
+    overflow-y: scroll;
+}
+
+.listaProductos h2 {
+    width: 70rem;
+    height: 6rem;
+    -webkit-text-stroke-width: 1px; /* Grosor del borde */
+    -webkit-text-stroke-color: rgb(0, 0, 0); /* Color del borde */
+}
+

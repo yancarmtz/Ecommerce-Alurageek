@@ -1,0 +1,12 @@
+.mensaje-error {
+    display: block;
+    background-color: black;
+    top: -33px;
+    right: -23px;
+    position: relative;
+    font-weight: 400;
+    font-style: italic;
+    font-size: .925rem;
+    color: red;
+    width: 25rem;
+}

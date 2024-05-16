@@ -6,8 +6,7 @@ app.use(cors());
 
 app.get('/cards', (req, res) => {
     const cards = [
-        { id: 1, name: 'Card 1', description: 'This is card 1' },
-        { id: 2, name: 'Card 2', description: 'This is card 2' },
+        { id: 1, name: 'cards', description: 'This is card 1' },
         // Puedes añadir más tarjetas aquí
     ];
     res.json(cards);

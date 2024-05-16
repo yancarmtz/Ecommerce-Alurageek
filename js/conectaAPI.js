@@ -14,6 +14,7 @@ async function listaCards(){
 }
 
 
+
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
 async function crearCard(nombre,precio,imagen){
         const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
@@ -27,7 +28,8 @@ async function crearCard(nombre,precio,imagen){
             imagen:imagen
         })
     })
-
+    console.log("conexion:");
+    console.log(conexion);
     // VALIDA SI LA CONEXION NO FUE EXITOSA
     if(!conexion.ok){
         //throw new Error("No fue posible enviar la card");

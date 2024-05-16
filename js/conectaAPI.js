@@ -15,13 +15,14 @@ async function listaCards(){
 
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
-async function crearCard(nombre,precio,imagen){
-        const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
+async function crearCard(id,nombre,precio,imagen){
+        const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards/${id}",{
         method:"POST",
         headers:{
             "Content-type":"application/json"
         },
         body:JSON.stringify({
+            id:id,
             nombre:nombre,
             precio:precio,
             imagen:imagen

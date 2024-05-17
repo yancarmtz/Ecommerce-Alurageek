@@ -17,54 +17,46 @@ async function listaCards(){
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
 async function crearCard(nombre,precio,imagen){
-      const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
-        method:"POST",
-        headers:{
-            "Content-type":"application/json"
-        },
-        body:JSON.stringify({
-            nombre:nombre,
-            precio:precio,
-            imagen:imagen
-        })
-    })
+    const producto = document.createElement('article');
+    producto.className = 'productos-item';
+    producto.dataset.id = id;
+    producto.innerHTML = `<img class="productos-img"
+    src="${imagen}"
+    alt="${nombre}">
+    <h4 class="productos-nombre">
+        ${nombre}
+    </h4>
+    <div>
+        <h5 class="productos-precio">
+            $ ${precio}
+        </h5>
+        <img class="trash" src="img/trash.svg" alt="Tacho de basura">
+    </div>`;
 
-    
-    // VALIDA SI LA CONEXION NO FUE EXITOSA
-    if(!conexion.ok){
-        const errorText = await conexion.text(); // Lee el texto de la respuesta
-        throw new Error(`No fue posible enviar la card: ${errorText}`);
-    }else {
-       // Mostrar el mensaje en el span con la clase "mensaje-enviado"
-       //const spanMensaje = document.querySelector(".mensaje-enviado");
-       //spanMensaje.innerHTML = "Cargado con exito.";  
-       console.log("Producto cargado con exito");
-    }
 
-    const conexionConvertida = await conexion.json();
+// FUNCION PARA ELIMINAR AL CLICKEAR EN EL TACHO DE BASURA
+    // Agregar evento de clic al icono de la papelera
+    const trashIcon = producto.querySelector('.trash');
+    trashIcon.addEventListener('click', (event) => {
+        event.preventDefault();
+        eliminarProducto(id);
+    });
+// HASTA AQUI
 
-    return conexionConvertida;
+    return producto;
 }
-
 
 
 
 
 // ELIMINA EL PRODUCTO AL HACER CLIC EN EL ICONO TRASH
 async function eliminarCard(id) {
-    try {
-      const respuesta = await fetch(`https://api-dbjson-alurageek.vercel.app/cards/${id}`, {
-        method: 'DELETE',
-        headers:{
-            "Content-type":"application/json"
-        }
-      })
-
-      if (respuesta.ok) {
-        console.log('Producto eliminado exitosamente.');
-      } 
+     try {
+        await fetch(`https://fake-api-alura-geek-nu.vercel.app/productos/${id}`, {
+            method: 'DELETE'
+        });
     } catch (error) {
-      console.error('Error de red:', error);
+        console.error('Error al eliminar el producto del servidor:', error);
     }
   }
 

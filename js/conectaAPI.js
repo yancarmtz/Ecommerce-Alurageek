@@ -16,7 +16,7 @@ async function listaCards(){
 
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
-async function crearCard(nombre,precio,imagen){
+async function crearCard(id, nombre, precio, imagen){
     const producto = document.createElement('article');
     producto.className = 'productos-item';
     producto.dataset.id = id;

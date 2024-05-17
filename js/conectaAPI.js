@@ -30,7 +30,7 @@ async function crearCard(id, nombre, precio, imagen){
         <h5 class="productos-precio">
             $ ${precio}
         </h5>
-        <img class="trash" src="img/trash.svg" alt="Tacho de basura">
+        <img class="trash" src="img/trash.png" alt="Tacho de basura">
     </div>`;
 
 

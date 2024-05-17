@@ -28,12 +28,12 @@ async function crearCard(nombre,precio,imagen){
             imagen:imagen
         })
     })
-    console.log("conexion:");
-    console.log(conexion);
+
+    
     // VALIDA SI LA CONEXION NO FUE EXITOSA
     if(!conexion.ok){
-        //throw new Error("No fue posible enviar la card");
-        console.log("No fue posible enviar la card");
+        const errorText = await conexion.text(); // Lee el texto de la respuesta
+        throw new Error(`No fue posible enviar la card: ${errorText}`);
     }else {
        // Mostrar el mensaje en el span con la clase "mensaje-enviado"
        //const spanMensaje = document.querySelector(".mensaje-enviado");

@@ -49,21 +49,27 @@ async function crearCard(nombre,precio,imagen){
 
 // ELIMINA EL PRODUCTO AL HACER CLIC EN EL ICONO TRASH
 async function eliminarCard(id) {
-    try {
+    /*try {
       const respuesta = await fetch(`https://api-dbjson-alurageek.vercel.app/cards/${id}`, {
         method: 'DELETE',
         headers:{
             "Content-type":"application/json"
         }
       })
-  
+    */
+
+      try {
+         const respuesta = await fetch(`https://fake-api-alura-geek-nu.vercel.app/productos/${id}`, {
+            method: 'DELETE'
+        });
+    } catch (error) {
+        console.error('Error al eliminar el producto del servidor:', error);
+    }
+}
 
       if (respuesta.ok) {
-        console.log('Producto eliminada exitosamente.');
-      } else {
-        console.error('Error al eliminar el producto.');
-        console.log(respuesta);
-      }
+        console.log('Producto eliminado exitosamente.');
+      } 
     } catch (error) {
       console.error('Error de red:', error);
     }

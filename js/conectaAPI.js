@@ -52,7 +52,7 @@ async function crearCard(id, nombre, precio, imagen){
 // ELIMINA EL PRODUCTO AL HACER CLIC EN EL ICONO TRASH
 async function eliminarCard(id) {
      try {
-        await fetch(`https://fake-api-alura-geek-nu.vercel.app/productos/${id}`, {
+        await fetch(`https://api-dbjson-alurageek.vercel.app/cards/${id}`, {
             method: 'DELETE'
         });
     } catch (error) {

@@ -16,8 +16,8 @@ async function listaCards(){
 
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
-async function crearCard(nombre,precio,imagen){
-        const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
+async function crearCard(id,nombre,precio,imagen){
+      const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
         method:"POST",
         headers:{
             "Content-type":"application/json"
@@ -47,24 +47,18 @@ async function crearCard(nombre,precio,imagen){
 }
 
 
+
+
+
 // ELIMINA EL PRODUCTO AL HACER CLIC EN EL ICONO TRASH
 async function eliminarCard(id) {
-    /*try {
+    try {
       const respuesta = await fetch(`https://api-dbjson-alurageek.vercel.app/cards/${id}`, {
         method: 'DELETE',
         headers:{
             "Content-type":"application/json"
         }
       })
-    */
-
-      try {
-         const respuesta = await fetch(`https://fake-api-alura-geek-nu.vercel.app/productos/${id}`, {
-            method: 'DELETE'
-        });
-    } catch (error) {
-        console.error('Error al eliminar el producto del servidor:', error);
-    }
 }
 
       if (respuesta.ok) {

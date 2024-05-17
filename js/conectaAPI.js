@@ -59,7 +59,6 @@ async function eliminarCard(id) {
             "Content-type":"application/json"
         }
       })
-}
 
       if (respuesta.ok) {
         console.log('Producto eliminado exitosamente.');

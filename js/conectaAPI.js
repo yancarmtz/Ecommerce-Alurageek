@@ -36,11 +36,11 @@ async function crearCard(id, nombre, precio, imagen){
 
 // FUNCION PARA ELIMINAR AL CLICKEAR EN EL TACHO DE BASURA
     // Agregar evento de clic al icono de la papelera
-    const trashIcon = producto.querySelector('.trash');
-    trashIcon.addEventListener('click', (event) => {
-        event.preventDefault();
-        eliminarProducto(id);
-    });
+ //   const trashIcon = producto.querySelector('.trash');
+ //   trashIcon.addEventListener('click', (event) => {
+ //       event.preventDefault();
+ //       eliminarProducto(id);
+ //   });
 // HASTA AQUI
 
     return producto;

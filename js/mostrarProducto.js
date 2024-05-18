@@ -3,24 +3,22 @@ import { conectaAPI } from "./conectaAPI.js";
 const lista = document.querySelector("[data-lista]");
 
 //validaciones
-
-export default function construyeCard(nombre, precio, imagen,id) {
-    const card = document.createElement("li");
-    card.className = "tarjeta";
-
-    card.innerHTML = 
-       `<img class="producto-imagen" title="Imagen producto" src="${imagen}">
-        <div class="producto-datos">
-            <h3  title="descripcion producto">${nombre}</h3>
-            <div class="datos-producto">
-                <h4 title="Precio producto">$ ${precio}</h4>
-                <input type="image" class="eliminar" title="Eliminar producto" src="img/trash.png" data-id="${id}">                               
-            </div>
-        </div>`
-
-    return card;
-}
-
+function construyeCard(id, nombre, precio, imagen) {
+    const producto = document.createElement('li');
+    producto.className = 'productos-item';
+    producto.dataset.id = id;
+    producto.innerHTML = `<img class="productos-img"
+    src="${imagen}"
+    alt="${nombre}">
+    <h4 class="productos-nombre">
+        ${nombre}
+    </h4>
+    <div>
+        <h5 class="productos-precio">
+            $ ${precio}
+        </h5>
+        <img class="eliminar" src="img/trash.png" alt="Tacho de basura">
+    </div>`;
 
 async function listaCards() {
     try{
@@ -32,5 +30,5 @@ async function listaCards() {
     }
 }
 
-
 listaCards();
+    

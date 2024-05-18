@@ -14,10 +14,8 @@ async function crearCard(evento){
     console.log("crea producto")
     
     try{
-        await conectaAPI.crearCard(nombre,precio,imagen); 
-        // Actualiza Cards 
-        await listaCards();
-
+        await conectaAPI.crearCard(nombre,precio,imagen);
+        
         console.log("Carga OK");
       
     }catch(e){

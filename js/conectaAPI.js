@@ -16,7 +16,7 @@ async function listaCards(){
 
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
-  const creaCard = (name, price, image) => {
+  const crearCard = (name, price, image) => {
       return fetch("https://api-dbjson-alurageek.vercel.app/cards", {
           method: "POST",
           headers: {

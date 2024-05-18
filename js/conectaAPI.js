@@ -66,5 +66,5 @@ async function eliminarCard(id) {
 
 // EXPORTA LA VARIABLE conectaAPI donde en los archivos js con import la llaman
 export const conectaAPI={
-    listaCards,crearCard
+    listaCards,crearCard,eliminarCard
 }

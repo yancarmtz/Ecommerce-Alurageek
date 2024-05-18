@@ -28,6 +28,6 @@ async function listaCards() {
     }catch{
         lista.innerHTML=`<h2 class="mensaje__titulo">No fue posible cargar la lista de productos</h2>`;
     }
-}
+};
 
 listaCards();

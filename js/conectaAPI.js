@@ -19,9 +19,6 @@ async function listaCards(){
   const crearCard = (name, price, image) => {
       return fetch("https://api-dbjson-alurageek.vercel.app/cards", {
           method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
           body: JSON.stringify({
               name,
               price,

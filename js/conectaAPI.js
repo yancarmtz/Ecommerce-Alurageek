@@ -53,10 +53,7 @@ async function crearCard(id, nombre, precio, imagen){
 async function eliminarCard(id) {
      try {
         await fetch(`https://api-dbjson-alurageek.vercel.app/cards/${id}`, {
-            method: 'DELETE',
-             headers:{
-            "Content-type":"application/json"
-        }
+            method: 'DELETE'        }
         });
     } catch (error) {
         console.error('Error al eliminar el producto del servidor:', error);

@@ -3,7 +3,7 @@ import { conectaAPI } from "./conectaAPI.js";
 const lista = document.querySelector("[data-lista]");
 
 //validaciones
-function construyeCard(id, nombre, precio, imagen) {
+export default function construyeCard(id, nombre, precio, imagen) {
     const producto = document.createElement('li');
     producto.className = 'productos-item';
     producto.dataset.id = id;

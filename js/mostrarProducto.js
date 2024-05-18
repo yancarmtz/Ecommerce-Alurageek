@@ -19,6 +19,7 @@ function construyeCard(id, nombre, precio, imagen) {
         </h5>
         <img class="eliminar" src="img/trash.png" alt="Tacho de basura">
     </div>`;
+};
 
 async function listaCards() {
     try{

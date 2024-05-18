@@ -17,7 +17,7 @@ async function listaCards(){
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
 async function crearCard(id, nombre, precio, imagen){
-    const producto = document.createElement('article');
+    const producto = document.createElement('li');
     producto.className = 'tarjeta';
     producto.dataset.id = id;
     producto.innerHTML = `<img class="productos-imagen"
@@ -36,7 +36,7 @@ async function crearCard(id, nombre, precio, imagen){
 
 // FUNCION PARA ELIMINAR AL CLICKEAR EN EL TACHO DE BASURA
 // Agregar evento de clic al icono de la papelera
-   const trashIcon = producto.querySelector('.trash');
+   const trashIcon = producto.querySelector('.eliminar');
    trashIcon.addEventListener('click', (event) => {
        event.preventDefault();
        eliminarCard(id);

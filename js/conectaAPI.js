@@ -18,19 +18,19 @@ async function listaCards(){
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
 async function crearCard(id, nombre, precio, imagen){
     const producto = document.createElement('article');
-    producto.className = 'productos-item';
+    producto.className = 'tarjeta';
     producto.dataset.id = id;
-    producto.innerHTML = `<img class="productos-img"
+    producto.innerHTML = `<img class="productos-imagen"
     src="${imagen}"
     alt="${nombre}">
-    <h4 class="productos-nombre">
+    <h4 class="producto-datos">
         ${nombre}
     </h4>
     <div>
-        <h5 class="productos-precio">
+        <h5 class="datos-producto">
             $ ${precio}
         </h5>
-        <img class="trash" src="img/trash.png" alt="Tacho de basura">
+        <img class="eliminar" src="img/trash.png" alt="Tacho de basura">
     </div>`;
 
 

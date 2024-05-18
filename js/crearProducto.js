@@ -15,7 +15,8 @@ async function crearCard(evento){
     
     try{
         await conectaAPI.crearCard(nombre,precio,imagen); 
-        //location.reload();
+        // Actualiza Cards 
+        await listarCards();
 
         console.log("Carga OK");
       

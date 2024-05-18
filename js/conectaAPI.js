@@ -16,34 +16,32 @@ async function listaCards(){
 
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
-async function crearCard(id, nombre, precio, imagen){
-    const producto = document.createElement('li');
-    producto.className = 'tarjeta';
-    producto.dataset.id = id;
-    producto.innerHTML = `<img class="productos-imagen"
-    src="${imagen}"
-    alt="${nombre}">
-    <h4 class="producto-datos">
-        ${nombre}
-    </h4>
-    <div>
-        <h5 class="datos-producto">
-            $ ${precio}
-        </h5>
-        <img class="eliminar" src="img/trash.png" alt="Tacho de basura">
-    </div>`;
+async function crearCard(nombre,precio,imagen){
+        const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify({
+            nombre:nombre,
+            precio:precio,
+            imagen:imagen
+        })
+    })
 
+    // VALIDA SI LA CONEXION NO FUE EXITOSA
+    if(!conexion.ok){
+        throw new Error("No fue posible enviar la card");
+    }else {
+       // Mostrar el mensaje en el span con la clase "mensaje-enviado"
+       //const spanMensaje = document.querySelector(".mensaje-enviado");
+       //spanMensaje.innerHTML = "Cargado con exito.";  
+       console.log("Producto cargado con exito");
+    }
 
-// FUNCION PARA ELIMINAR AL CLICKEAR EN EL TACHO DE BASURA
-// Agregar evento de clic al icono de la papelera
-   const trashIcon = producto.querySelector('.eliminar');
-   trashIcon.addEventListener('click', (event) => {
-       event.preventDefault();
-       eliminarCard(id);
-   });
-// HASTA AQUI
+    const conexionConvertida = await conexion.json();
 
-    return producto;
+    return conexionConvertida;
 }
 
 

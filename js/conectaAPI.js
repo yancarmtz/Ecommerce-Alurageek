@@ -2,10 +2,10 @@
 // MUESTRA LA LISTA DE TARGETAS AGREGADAS DESDE EL FORMULARIO EN PANTALLA
 async function listaCards(){
     const conexion = await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
-        method:"GET"/*,
+        method:"GET",
         headers:{
         "Content-type":"application/json"
-        }*/
+        }
     });
     
     const conexionConvertida = await conexion.json();

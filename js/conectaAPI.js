@@ -16,33 +16,23 @@ async function listaCards(){
 
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
-async function crearCard(nombre,precio,imagen){
-        const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
-        method:"POST",
-        headers:{
-            "Content-type":"application/json"
-        },
-        body:JSON.stringify({
-            nombre:nombre,
-            precio:precio,
-            imagen:imagen
-        })
-    })
+  const creaCard = (name, price, image) => {
+      return fetch("https://api-dbjson-alurageek.vercel.app/cards", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              name,
+              price,
+              image,
+          })
+      })
+      .then((res) => res.json())
+      .catch((err) => console.log(err));{
+      };
+  }
 
-    // VALIDA SI LA CONEXION NO FUE EXITOSA
-    if(!conexion.ok){
-        throw new Error("No fue posible enviar la card");
-    }else {
-       // Mostrar el mensaje en el span con la clase "mensaje-enviado"
-       //const spanMensaje = document.querySelector(".mensaje-enviado");
-       //spanMensaje.innerHTML = "Cargado con exito.";  
-       console.log("Producto cargado con exito");
-    }
-
-    const conexionConvertida = await conexion.json();
-
-    return conexionConvertida;
-}
 
 
 

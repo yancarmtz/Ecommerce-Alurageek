@@ -35,8 +35,8 @@ async function crearCard(nombre,precio,imagen){
         throw new Error("No fue posible enviar la card");
     }else {
        // Mostrar el mensaje en el span con la clase "mensaje-enviado"
-       //const spanMensaje = document.querySelector(".mensaje-enviado");
-       //spanMensaje.innerHTML = "Cargado con exito.";  
+       const spanMensaje = document.querySelector(".mensaje-enviado");
+       spanMensaje.innerHTML = "Cargado con exito.";  
        console.log("Producto cargado con exito");
     }
 

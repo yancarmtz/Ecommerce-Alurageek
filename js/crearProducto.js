@@ -29,6 +29,8 @@ const render = async () => {
     try {
         const listProducts = await conectaAPI.crearCard();
         if (listProducts && Array.isArray(listProducts)) {
+            console.log("listProducts de crearProducto.js:");
+            console.log(listProducts);
             listProducts.forEach(product => {
                 productContainer.appendChild(
                     createCard(
@@ -41,7 +43,7 @@ const render = async () => {
                 );
             });
         } else {
-            console.error('Expected an array of products, but got:', listProducts);
+            console.error('Esperaba una variedad de productos, pero obtuve:', listProducts);
         }
     } catch (error) {
         console.error('Error in render function:', error);

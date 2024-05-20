@@ -57,6 +57,10 @@ formulario.addEventListener("submit", async (event) => {
     const nombre = document.querySelector("[data-nombre]").value;
     const precio = document.querySelector("[data-precio]").value;
     const imagen = document.querySelector("[data-imagen]").value;
+    console.log("Entra a submit:")
+    console.log("nombre: " + nombre);
+    console.log("precio: " + precio);
+    console.log("imagen: " + imagen);
 
     conectaAPI.crearCard(nombre, precio, imagen)
     .then((res) => {

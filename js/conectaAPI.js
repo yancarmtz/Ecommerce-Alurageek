@@ -38,8 +38,17 @@ async function crearCard(nombre,precio,imagen){
        const spanMensaje = document.querySelector(".mensaje-enviado");
        spanMensaje.innerHTML = "Cargado con exito.";  
        console.log("Producto cargado con exito");
+
+        const nuevoProducto = await conexion.json();
+        
+        // Actualizar el DOM para mostrar la nueva tarjeta
+        const listaproductos = document.getElementsByClassName('listaproductos');
+        const newCard = createCard(nuevoProducto.id, nuevoProducto.nombre, nuevoProducto.precio, nuevoProducto.imagen);
+        listaproductos.appendChild(newCard);
     }
 
+    return nuevoProducto;
+    
     const conexionConvertida = await conexion.json();
 
     return conexionConvertida;

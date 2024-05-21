@@ -39,19 +39,9 @@ async function crearCard(nombre,precio,imagen){
        spanMensaje.innerHTML = "Cargado con exito.";  
        console.log("Producto cargado con exito");
 
-        const nuevoProducto = await conexion.json();
-
-        // Actualizar el DOM para mostrar la nueva tarjeta
-        const listaproductos = document.getElementsByClassName('listaproductos')[0]; // Selecciona el primer elemento con la clase 'listaproductos'
-        if (listaproductos) { // Asegúrate de que existe el elemento
-            const newCard = crearCard(producto.id, producto.nombre, producto.precio, producto.imagen);
-             listaproductos.appendChild(newCard);
-        }
-        return nuevoProducto;
+        window.location.href = "https://yancarmtz.github.io/Ecommerce-Alurageek/";
     }
 
-    
-    
     const conexionConvertida = await conexion.json();
 
     return conexionConvertida;

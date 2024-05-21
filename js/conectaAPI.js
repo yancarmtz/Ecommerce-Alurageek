@@ -40,11 +40,13 @@ async function crearCard(nombre,precio,imagen){
        console.log("Producto cargado con exito");
 
         const nuevoProducto = await conexion.json();
-        
+
         // Actualizar el DOM para mostrar la nueva tarjeta
-        const listaproductos = document.getElementsByClassName('listaproductos');
-        const newCard = crearCard(nuevoProducto.id, nuevoProducto.nombre, nuevoProducto.precio, nuevoProducto.imagen);
-        listaproductos.appendChild(newCard);
+        const listaproductos = document.getElementsByClassName('listaproductos')[0]; // Selecciona el primer elemento con la clase 'listaproductos'
+        if (listaproductos) { // Asegúrate de que existe el elemento
+            const newCard = crearCard(nuevoProducto.id, nuevoProducto.nombre, nuevoProducto.precio, nuevoProducto.imagen);
+             listaproductos.appendChild(newCard);
+        }
     }
 
     return nuevoProducto;

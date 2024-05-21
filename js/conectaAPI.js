@@ -1,7 +1,7 @@
 
 // MUESTRA LA LISTA DE TARGETAS AGREGADAS DESDE EL FORMULARIO EN PANTALLA
 async function listaCards(){
-    const conexion = await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
+    const conexion = await fetch("https://api-alurageek-render-5.onrender.com/cards",{
         method:"GET",
         headers:{
         "Content-type":"application/json"
@@ -18,7 +18,7 @@ async function listaCards(){
 
 // AGREGA LA TARJETA QUE SE AGREGARA EN PANTALLA, SI HAY TARJETAS EN PANTALLA LA AGREGA EN EL ESPACIO SIGUIENTE
 async function crearCard(nombre,precio,imagen){
-        const conexion= await fetch("https://api-dbjson-alurageek.vercel.app/cards",{
+        const conexion= await fetch("https://api-alurageek-render-5.onrender.com/cards",{
         method:"POST",
         headers:{
             "Content-type":"application/json"
@@ -50,7 +50,7 @@ async function crearCard(nombre,precio,imagen){
 // ELIMINA EL PRODUCTO AL HACER CLIC EN EL ICONO TRASH
 async function eliminarCard(id) {
      try {
-        await fetch(`https://api-dbjson-alurageek.vercel.app/cards/${id}`, {
+        await fetch(`https://api-alurageek-render-5.onrender.com/cards/${id}`, {
             method: 'DELETE'
         });
     } catch (error) {

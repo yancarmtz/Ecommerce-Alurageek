@@ -44,7 +44,7 @@ async function crearCard(nombre,precio,imagen){
         // Actualizar el DOM para mostrar la nueva tarjeta
         const listaproductos = document.getElementsByClassName('listaproductos')[0]; // Selecciona el primer elemento con la clase 'listaproductos'
         if (listaproductos) { // Asegúrate de que existe el elemento
-            const newCard = crearCard(nuevoProducto.id, nuevoProducto.nombre, nuevoProducto.precio, nuevoProducto.imagen);
+            const newCard = crearCard(producto.id, producto.nombre, producto.precio, producto.imagen);
              listaproductos.appendChild(newCard);
         }
     }

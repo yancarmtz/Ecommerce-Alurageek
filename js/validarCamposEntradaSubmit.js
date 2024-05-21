@@ -1,4 +1,5 @@
-document.getElementById('enviar').addEventListener('click', (event) => {
+/*
+    document.getElementById('enviar').addEventListener('click', (event) => {
     event.preventDefault(); // Prevent form from submitting
 
     const nombre = document.querySelector("[data-nombre]").value;
@@ -11,3 +12,5 @@ document.getElementById('enviar').addEventListener('click', (event) => {
 
     };
 });
+
+*/

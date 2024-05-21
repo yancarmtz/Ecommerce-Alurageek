@@ -47,9 +47,10 @@ async function crearCard(nombre,precio,imagen){
             const newCard = crearCard(producto.id, producto.nombre, producto.precio, producto.imagen);
              listaproductos.appendChild(newCard);
         }
+        return nuevoProducto;
     }
 
-    return nuevoProducto;
+    
     
     const conexionConvertida = await conexion.json();
 

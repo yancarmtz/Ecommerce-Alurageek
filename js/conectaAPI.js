@@ -43,7 +43,7 @@ async function crearCard(nombre,precio,imagen){
         
         // Actualizar el DOM para mostrar la nueva tarjeta
         const listaproductos = document.getElementsByClassName('listaproductos');
-        const newCard = createCard(nuevoProducto.id, nuevoProducto.nombre, nuevoProducto.precio, nuevoProducto.imagen);
+        const newCard = crearCard(nuevoProducto.id, nuevoProducto.nombre, nuevoProducto.precio, nuevoProducto.imagen);
         listaproductos.appendChild(newCard);
     }
 

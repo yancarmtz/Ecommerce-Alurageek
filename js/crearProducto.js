@@ -1,5 +1,29 @@
 import { conectaAPI } from "./conectaAPI.js";
 
+document.getElementById('enviar').addEventListener('click', async (event) => {
+    event.preventDefault(); // Prevent form from submitting
+
+    const nombre = document.querySelector("[data-nombre]").value;
+    const precio = document.querySelector("[data-precio]").value;
+    const imagen = document.querySelector("[data-imagen]").value;  
+    
+
+    if (nombre == "" || precio == "" || imagen == "") {
+        alert("Los campos del formulario no estan informados");
+    }else {
+        try{
+            await conectaAPI.crearCard(nombre,precio,imagen); 
+    
+            console.log("Carga OK");
+          
+        }catch(e){
+            alert(e);
+            console.log("Carga NOK");
+        }   
+    }
+
+});
+
 /*
 const formulario = document.querySelector("[data-formulario]");
 const productContainer = document.querySelector("[data-lista]");
@@ -72,6 +96,7 @@ formulario.addEventListener("submit", async (event) => {
 });
 */
 
+/*
 const formulario = document.querySelector("[data-formulario]");
 
 //validaciones
@@ -98,4 +123,10 @@ async function crearCard(evento){
 }
 
 formulario,addEventListener("submit", evento => crearCard(evento)); 
+*/
+
+
+
+
+
 

@@ -55,6 +55,8 @@ async function eliminarCard(id) {
         await fetch(`https://api-alurageek-render-5.onrender.com/cards/${id}`, {
             method: 'DELETE'
         });
+       const spanMensaje = document.querySelector(".mensaje-enviado");
+       spanMensaje.innerHTML = "Ok";  
     } catch (error) {
         console.error('Error al eliminar el producto del servidor:', error);
     }

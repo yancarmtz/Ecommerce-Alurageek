@@ -1,5 +1,9 @@
 import { conectaAPI } from "./conectaAPI.js";
 
+//const formulario = document.querySelector("[data-formulario]"); 
+
+//FUNCIONO ESTE CODIGO PARA VALIDAR LOS CAMPOS DEL FORMULARIO CUANDO ALGUNO O TODOS ESTAN VACIOS
+//document con getelementbyid funciona correctamente, aqui ya no va el cuerpo del formulario [data-formulario]
 document.getElementById('enviar').addEventListener('click', async (event) => {
     event.preventDefault(); // Prevent form from submitting
 

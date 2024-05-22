@@ -57,6 +57,7 @@ async function eliminarCard(id) {
         });
        const spanMensaje = document.querySelector(".mensaje-enviado");
        spanMensaje.innerHTML = "Ok";  
+       window.location.href = "https://yancarmtz.github.io/Ecommerce-Alurageek/";
     } catch (error) {
         console.error('Error al eliminar el producto del servidor:', error);
     }

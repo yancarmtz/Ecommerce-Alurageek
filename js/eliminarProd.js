@@ -16,6 +16,8 @@ export async function eliminarProducto() {
                 e.target.closest(".tarjeta").remove(); // la clase tarjeta la toma del li generado del archivo mostrarProducto.js 
                                                        //<= <li class="tarjeta"><img class="producto-imagen" title="Imagen producto" 
                                                        //src="https://www.novelmex.com/cdn/shop/files/WhatsAppImage2023-07-31at19.13.10_600x.jpg?v=1690852542">
+                const spanMensaje = document.querySelector(".mensaje-enviado");
+                spanMensaje.innerHTML = "Ok";  
 
                 console.log(id);
 

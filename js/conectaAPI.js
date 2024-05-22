@@ -36,7 +36,7 @@ async function crearCard(nombre,precio,imagen){
     }else {
        // Mostrar el mensaje en el span con la clase "mensaje-enviado"
        const spanMensaje = document.querySelector(".mensaje-enviado");
-       spanMensaje.innerHTML = "Cargado con exito.";  
+       spanMensaje.innerHTML = "Ok";  
        console.log("Producto cargado con exito");
 
         window.location.href = "https://yancarmtz.github.io/Ecommerce-Alurageek/";
